@@ -2,7 +2,8 @@
 import java.util.Scanner;
 class MyMain {
  
-public static int binaryToDecimal(int binary){
+public static int binaryToDecimal(String binaryStr){
+    int binary = Integer.parseInt(binaryStr);
  
     int fin_val = 0; // initiallizes val
     int a = 0; // initializes power
@@ -23,9 +24,9 @@ public static int binaryToDecimal(int binary){
  
 public static void main(String args[]){
     Scanner scan = new Scanner(System.in);
-    String str = scan.next();
+    // String str = scan.next();
     System.out.println("Please input a binary value: "); //prompts user to input binary value
-    int user_input = scan.nextInt();
+    String user_input = scan.next();
     System.out.println("Decimal representation of inputted binary value: " + binaryToDecimal(user_input));
   } //outputs user friendly message
 }
